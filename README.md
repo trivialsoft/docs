@@ -67,12 +67,16 @@ http:://servername:port/loop/@appname/anycollectionname
 ## Leer una instancia
 
 ```php
-$instance = orm:instance(MODELNAME, ID, LEVEL);
+use \core\Factory\Factory as orm;
+...
+$instance = orm::instance(MODELNAME, ID, LEVEL);
 ```
 
 ## Leer una lista de instancias
 
 ```php
+use \core\Factory\Factory as orm;
+...
 $list = orm::instances(MODELNAME, FILTER, LEVEL, ORDER, SELECT, PAGE);
 ```
 
