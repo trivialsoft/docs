@@ -46,7 +46,7 @@ rloop /
 
 ```plain
 Method: POST
-http:://servername:port/loop/@appname/anycollectionname
+http://servername:port/loop/@appname/anycollectionname
 ```
 
 ### BODY
