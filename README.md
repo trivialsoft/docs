@@ -107,7 +107,7 @@ $instance->save();
 
 ## Estructura de un componente
 
-> Se ejemplifica con el siguiente ejemplo:
+> Se ejemplifica a continuación:
 
 ```plain
 
