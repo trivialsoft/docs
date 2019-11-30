@@ -63,7 +63,13 @@ http://servername:port/loop/@appname/anycollectionname
 [
     {
         "modelname":"MODELNAME",
-        "MODELNAME":"IDENTIFIER",
+        "MODELNAME":"IDENTIFIER_1",
+        "property_1":"property_value_1",
+        "property_2":"property_value_2"
+    },
+    {
+        "modelname":"MODELNAME",
+        "MODELNAME":"IDENTIFIER_2",
         "property_1":"property_value_1",
         "property_2":"property_value_2"
     }
