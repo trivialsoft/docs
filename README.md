@@ -96,3 +96,76 @@ $instance = new classname\classname();
 $ins
 $instance->save();
 ```
+
+## Estructura de un componente
+
+> Se ejemplifica con el siguiente ejemplo:
+
+```plain
+
+Usuario(carpeta)/Usuario.php             -- Modelo
+                /UsuarioComponent.php    -- Script Backend
+```
+
+## Modelo Persistente
+
+> Un modelo Persistente, es la clase que se usa para representar objetos persistidos en la base de datos, tienen la estructura que se ejemplifica a continuación:
+
+```php
+<?php
+/**
+*  file location: components/Usuario/Usuario.php 
+*/
+namespace Usuario;
+use \core\Model\Model as Model;
+class Usuario extends Model implements \JsonSerializable {
+	public $Usuario;
+	public $Nombre;
+	function __construct()
+	{
+		parent::__construct();
+	}
+
+function subinstances()
+	{
+		return array("Ciudad"=>"Ciudad");
+	}
+
+public function jsonSerialize() 
+	{
+	return [
+		'Usuario' => $this->Usuario,
+		'Nombre' => $this->Nombre
+		];
+		}
+	}
+?>
+```
+
+## Modelo No Persistentes
+
+> Un modelo No Persistente es una clase que se usan para poblar información de componente y que no guarda relacion directa con una entidad , tienen
+la estructura que se ejemplifica a continuación:
+
+```php
+<?php
+/**
+*  file location: components/Home/Home.php
+*/
+namespace Home;
+class Home {
+function __construct()
+	{
+	}
+
+function Nombre()
+	{
+		return "TrivialSoft";
+	}
+function select()
+	{
+		return array(0=>$this);
+	}
+}
+?>
+```
