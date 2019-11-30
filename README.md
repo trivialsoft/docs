@@ -38,6 +38,12 @@ rloop /
 ### Leer
 
 ```plain
+Nota: todas los request deben llevar en el header un token oauth
+Authorization Bearer 1234abc...
+
+headers:
+Content-Type:application/json
+
  Method: GET
  http://servername:port/loop/@appname/collectionname/level/sort/filter/actions/page/format/pql
 ```
@@ -50,6 +56,8 @@ http://servername:port/loop/@appname/anycollectionname
 ```
 
 ### BODY
+
+> raw+JSON(application/json)
 
 ```json
 [
