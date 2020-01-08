@@ -107,7 +107,7 @@ $list = orm::instances(MODELNAME, FILTER, LEVEL, ORDER, SELECT, PAGE);
 
 ```php
 $instance = new classname\classname();
-$ins
+$instance->Property = "New Value";
 $instance->save();
 ```
 
